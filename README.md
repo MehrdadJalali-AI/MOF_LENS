@@ -2,5 +2,5 @@
 
 
 <p align="center">
-    <img src="MOF-LENS.png" alt="MOF-LENS Optimization" width="500" height="500">
+    <img src="MOFLENS_V2.png" alt="MOF-LENS Optimization" width="500" height="500">
 </p>
