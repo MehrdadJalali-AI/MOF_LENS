@@ -1,0 +1,32 @@
+general:
+  n_runs: 30
+  population_size: 30
+  max_iterations: 100
+  top_k: 5
+
+drugs:
+  doxorubicin:
+    smiles: "CC1C(C(CC(O1)OC2CC(CC3=C2C(=C4C(=C3O)C(=O)C5=C(C4=O)C(=CC=C5)OC)O)(C(=O)CO)O)N(C)C)O"
+    pld_target: 13.5
+
+features:
+  numerical:
+    - pld (A)
+    - lcd (A)
+    - void_fraction
+    - asa (A^2)
+    - av (A^3)
+    - max_metal_coordination_n
+  fingerprint_column: "linker_smile"
+
+paths:
+  data: "data/MOF.csv"
+
+fitness:
+  weights:
+    pld: 0.30
+    chemical_sim: 0.25
+    ph_stability: 0.20
+    nh2_func: 0.15
+    toxicity: -0.05
+  lambda_div: 0.03
